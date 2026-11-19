@@ -22,7 +22,7 @@ main{width:min(1120px,94%);margin:auto}.section{margin:28px 0;padding:clamp(20px
 .section h2{margin:0 0 18px;color:#9f2e65;font-size:clamp(21px,3vw,28px)}.section h2:after{content:"";display:block;width:68px;height:3px;background:var(--pink);margin-top:8px;border-radius:4px}
 .intro{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.intro-card{padding:25px;border-radius:18px;background:linear-gradient(135deg,#fff4f8,#fff)}.manager-photo{width:100%;max-height:340px;object-fit:cover;object-position:center 25%;border-radius:18px;box-shadow:0 12px 30px #30172720}
 .pill{display:inline-block;background:#fbe8f0;color:#9f2e65;border-radius:30px;padding:4px 12px;font-size:12px}
-.gallery-wrap{position:relative}.gallery-stage{overflow:hidden;border-radius:18px;background:#211821;touch-action:pan-y}.gallery-track{display:flex;transition:transform .45s ease;direction:ltr}.gallery-slide{min-width:100%;position:relative;aspect-ratio:16/9}.gallery-slide img{width:100%;height:100%;object-fit:cover;display:block}.gallery-caption{position:absolute;bottom:0;left:0;right:0;color:white;padding:30px 18px 15px;background:linear-gradient(transparent,#100d12d9);direction:rtl}
+.gallery-wrap{position:relative}.gallery-stage{overflow:hidden;border-radius:18px;background:#211821;touch-action:pan-y}.gallery-track{display:flex;transition:transform .45s ease;direction:ltr}.gallery-slide{min-width:100%;position:relative;aspect-ratio:16/9}.gallery-slide img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.035);filter:saturate(1.04);transition:transform .75s cubic-bezier(.2,.75,.25,1),filter .75s ease,opacity .75s ease}.gallery-slide{opacity:.78;transition:opacity .75s ease}.gallery-slide.is-active{opacity:1}.gallery-slide.is-active img{transform:scale(1);filter:saturate(1.12)}.gallery-caption{position:absolute;bottom:0;left:0;right:0;color:white;padding:30px 18px 15px;background:linear-gradient(transparent,#100d12d9);direction:rtl}
 .gallery-controls{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:14px}.arrow{width:46px;height:44px;border:1px solid var(--line);border-radius:12px;background:#fff;color:#8c2e5d;font-size:23px}.dots{display:flex;gap:7px}.dot{width:8px;height:8px;border-radius:50%;background:#e6cbd8}.dot.active{background:var(--pink);width:22px;border-radius:8px}
 .gallery-note{color:var(--muted);font-size:13px;margin-top:12px}
 .rule-list{padding-right:22px}.rule-list li{margin:8px 0}.contact-card{background:#fff4f8;padding:18px;border-radius:16px}
@@ -77,12 +77,17 @@ footer{text-align:center;padding:30px 15px;background:#1b151d;color:#fff;margin-
   <div class="gallery-wrap">
     <div class="gallery-stage" id="galleryStage">
       <div class="gallery-track" id="galleryTrack">
-        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1400&q=85" alt="پرتره فشن"><div class="gallery-caption">پرتره و زیبایی‌شناسی</div></div>
+        <div class="gallery-slide is-active"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1400&q=85" alt="پرتره فشن"><div class="gallery-caption">پرتره و زیبایی‌شناسی</div></div>
         <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=85" alt="استایل خیابانی"><div class="gallery-caption">استایل معاصر</div></div>
         <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1400&q=85" alt="مدلینگ فشن"><div class="gallery-caption">فشن و طراحی لباس</div></div>
         <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=85" alt="پوشاک و استایل"><div class="gallery-caption">ترکیب رنگ و پوشش</div></div>
         <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1400&q=85" alt="عکاسی پرتره"><div class="gallery-caption">نورپردازی پرتره</div></div>
         <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=1400&q=85" alt="طراحی لباس"><div class="gallery-caption">جزئیات استایل</div></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1400&q=85" alt="فشن ادیتوریال"><div class="gallery-caption">فشن ادیتوریال</div></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1400&q=85" alt="مدلینگ و فشن"><div class="gallery-caption">مدلینگ و فشن</div></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1400&q=85" alt="پرتره استودیویی"><div class="gallery-caption">پرتره استودیویی</div></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=85" alt="استایل روزمره"><div class="gallery-caption">استایل روزمره</div></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=85" alt="استایل شهری"><div class="gallery-caption">استایل شهری</div></div>
       </div>
     </div>
     <div class="gallery-controls">
@@ -92,6 +97,7 @@ footer{text-align:center;padding:30px 15px;background:#1b151d;color:#fff;margin-
     </div>
   </div>
   <p class="gallery-note">تصاویر صرفاً برای الگوگیری و آموزش هستند و به‌معنای عضویت یا همکاری افراد حاضر در تصاویر نیستند.</p>
+  <p class="gallery-note" id="imageAccessNotice" hidden>اگر تصاویر برای شما باز نمی‌شوند، ممکن است دسترسی به منبع تصویر محدود باشد؛ اتصال اینترنت را بررسی کنید و در صورت نیاز از فیلترشکن استفاده کنید.</p>
 </section>
 
 <section class="section" id="rules">
@@ -117,6 +123,7 @@ footer{text-align:center;padding:30px 15px;background:#1b151d;color:#fff;margin-
 <section class="section" id="members">
   <h2>ورود اعضا و گفت‌وگو با مدیریت</h2>
   <p class="muted">نام نمایشی خود را وارد کنید. گفت‌وگوی قبلی روی همین مرورگر و دستگاه، در صورت پاک نشدن داده‌های مرورگر، قابل ادامه است.</p>
+  <p class="muted">برای دسترسی پایدارتر به گفت‌وگوی ویژه کاربران، استفاده از فیلترشکن توصیه می‌شود.</p>
   <div id="memberLogin" class="panel">
     <label for="memberName">نام نمایشی</label>
     <input id="memberName" maxlength="40" placeholder="نام خود را وارد کنید">
@@ -164,12 +171,20 @@ const heroImages=[...document.querySelectorAll("#heroSlides img")];
 let heroIndex=0;
 setInterval(()=>{heroImages[heroIndex].classList.remove("active");heroIndex=(heroIndex+1)%heroImages.length;heroImages[heroIndex].classList.add("active")},4200);
 
+/* اطلاع‌رسانی فقط هنگام بارگذاری ناموفق تصاویر خارجی */
+const imageAccessNotice=document.getElementById("imageAccessNotice");
+document.querySelectorAll("#galleryTrack img, #heroSlides img").forEach(img=>{
+  img.addEventListener("error",()=>{
+    if(imageAccessNotice) imageAccessNotice.hidden=false;
+  },{once:true});
+});
+
 /* گالری: خودکار، فلش و لمس */
 const track=document.getElementById("galleryTrack");
 const slides=[...track.children], dotsBox=document.getElementById("galleryDots");
 let slideIndex=0, galleryTimer;
 slides.forEach((_,i)=>{const b=document.createElement("button");b.className="dot"+(i===0?" active":"");b.setAttribute("aria-label","نمایش تصویر "+(i+1));b.onclick=()=>goSlide(i);dotsBox.appendChild(b)});
-function goSlide(i){slideIndex=(i+slides.length)%slides.length;track.style.transform=`translateX(-${slideIndex*100}%)`;[...dotsBox.children].forEach((d,j)=>d.classList.toggle("active",j===slideIndex));}
+function goSlide(i){slideIndex=(i+slides.length)%slides.length;track.style.transform=`translateX(-${slideIndex*100}%)`;slides.forEach((slide,j)=>slide.classList.toggle("is-active",j===slideIndex));[...dotsBox.children].forEach((d,j)=>d.classList.toggle("active",j===slideIndex));}
 function resetGalleryTimer(){clearInterval(galleryTimer);galleryTimer=setInterval(()=>goSlide(slideIndex+1),4800)}
 document.getElementById("galleryPrev").onclick=()=>{goSlide(slideIndex-1);resetGalleryTimer()};
 document.getElementById("galleryNext").onclick=()=>{goSlide(slideIndex+1);resetGalleryTimer()};
